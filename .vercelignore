@@ -1,0 +1,8 @@
+.env*
+.git/
+.vercel/
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+pocketaura.db

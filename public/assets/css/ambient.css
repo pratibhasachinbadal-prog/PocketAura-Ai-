@@ -1,0 +1,267 @@
+.ambient-background {
+    position: fixed;
+    z-index: 0;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    isolation: isolate;
+    background:
+        radial-gradient(ellipse at 82% 18%, rgba(86, 92, 207, .1), transparent 42%),
+        radial-gradient(ellipse at 14% 78%, rgba(116, 56, 184, .1), transparent 44%);
+}
+
+.ambient-galaxy {
+    position: absolute;
+    inset: -2%;
+    opacity: .18;
+    background-image: url("/assets/images/section-backgrounds/cosmic-nebula.webp");
+    background-position: center;
+    background-size: cover;
+    mix-blend-mode: screen;
+    animation: aura-galaxy-drift 72s ease-in-out infinite alternate;
+}
+
+.ambient-canvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .7;
+}
+
+.ambient-haze {
+    position: absolute;
+    inset: -35%;
+    opacity: .34;
+    background:
+        radial-gradient(ellipse at 28% 42%, rgba(77, 104, 221, .19), transparent 34%),
+        radial-gradient(ellipse at 70% 64%, rgba(151, 77, 219, .17), transparent 35%);
+    filter: blur(26px);
+    transform: translate3d(0, 0, 0);
+    animation: aura-haze-drift 36s ease-in-out infinite alternate;
+}
+
+.ambient-orb {
+    position: absolute;
+    top: 13%;
+    right: -7%;
+    width: clamp(210px, 28vw, 430px);
+    aspect-ratio: 1;
+    border: 1px solid rgba(151, 166, 255, .13);
+    border-radius: 50%;
+    opacity: .2;
+    background:
+        radial-gradient(circle at 32% 28%, rgba(200, 214, 255, .24), transparent 13%),
+        radial-gradient(circle at 42% 38%, rgba(97, 135, 255, .3), transparent 38%),
+        radial-gradient(circle at 64% 68%, rgba(142, 70, 228, .24), transparent 48%),
+        radial-gradient(circle at 50% 50%, rgba(18, 30, 78, .08), rgba(7, 10, 25, .6) 72%);
+    box-shadow:
+        inset -24px -24px 70px rgba(13, 12, 39, .7),
+        inset 10px 12px 42px rgba(155, 179, 255, .12),
+        0 0 55px rgba(105, 117, 255, .1);
+    transform-style: preserve-3d;
+    animation: aura-orb-float 22s ease-in-out infinite alternate;
+}
+
+.ambient-orb::before,
+.ambient-orb::after {
+    position: absolute;
+    content: "";
+    border: 1px solid rgba(156, 173, 255, .24);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.ambient-orb::before {
+    inset: -12%;
+    transform: rotateX(67deg) rotateZ(-24deg);
+    box-shadow: 0 0 22px rgba(102, 129, 255, .12);
+    animation: aura-orbit 34s linear infinite;
+}
+
+.ambient-orb::after {
+    inset: 18%;
+    border-color: rgba(183, 142, 255, .18);
+    transform: rotateY(62deg);
+}
+
+.ambient-wave {
+    position: absolute;
+    right: -18%;
+    bottom: -16%;
+    left: -18%;
+    height: 40%;
+    border-top: 1px solid rgba(100, 145, 255, .16);
+    border-radius: 50%;
+    opacity: .32;
+    box-shadow:
+        0 -15px 35px rgba(58, 107, 227, .07),
+        0 -38px 60px rgba(116, 70, 214, .045);
+    transform: perspective(580px) rotateX(57deg);
+    animation: aura-wave-drift 19s ease-in-out infinite alternate;
+}
+
+.ambient-wave::before,
+.ambient-wave::after {
+    position: absolute;
+    inset: 17px -2% auto;
+    height: 100%;
+    border-top: 1px solid rgba(135, 111, 255, .1);
+    border-radius: 50%;
+    content: "";
+}
+
+.ambient-wave::after {
+    inset: 35px -4% auto;
+    border-color: rgba(91, 158, 255, .09);
+}
+
+.app-layout {
+    position: relative;
+    z-index: 1;
+}
+
+.page-section {
+    position: relative;
+    isolation: isolate;
+}
+
+.page-section::before {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    border: 1px solid rgba(164, 174, 255, .035);
+    border-radius: 25px;
+    background-position: center 48%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: "";
+    pointer-events: none;
+    animation: aura-section-drift 58s ease-in-out infinite alternate;
+}
+
+#dashboardSection::before {
+    background-image:
+        linear-gradient(180deg, rgba(9, 11, 22, .45), rgba(9, 11, 22, .8) 62%, rgba(12, 11, 18, .94)),
+        url("/assets/images/section-backgrounds/ai-brain-visual.webp"),
+        url("/assets/images/section-backgrounds/ai-control-room.webp");
+    background-position: center 48%, 92% 50%, center 48%;
+    background-size: cover, auto 100%, cover;
+    background-blend-mode: normal, screen, normal;
+    animation-name: aura-dashboard-drift;
+}
+
+#chatSection::before {
+    background-image:
+        linear-gradient(180deg, rgba(8, 11, 22, .36), rgba(8, 11, 22, .83) 62%, rgba(12, 11, 18, .95)),
+        url("/assets/images/section-backgrounds/neural-ai-visual.webp");
+}
+
+#studySection::before {
+    background-image:
+        linear-gradient(180deg, rgba(8, 11, 22, .4), rgba(8, 11, 22, .84) 62%, rgba(12, 11, 18, .96)),
+        url("/assets/images/thumbnails/bookshelf.webp");
+}
+
+#codeSection::before {
+    background-image:
+        linear-gradient(180deg, rgba(8, 13, 25, .48), rgba(8, 13, 25, .86) 62%, rgba(12, 11, 18, .96)),
+        url("/assets/images/section-backgrounds/code-matrix.webp");
+}
+
+#createSection::before {
+    background-image:
+        linear-gradient(180deg, rgba(14, 10, 23, .42), rgba(14, 10, 23, .84) 62%, rgba(12, 11, 18, .96)),
+        url("/assets/images/content/creative-studio.webp");
+}
+
+#challengeSection::before {
+    background-image:
+        linear-gradient(180deg, rgba(10, 10, 20, .42), rgba(10, 10, 20, .86) 62%, rgba(12, 11, 18, .96)),
+        url("/assets/images/challenges/achievement-stage.webp");
+}
+
+#notesSection::before {
+    background-image:
+        linear-gradient(180deg, rgba(11, 10, 20, .4), rgba(11, 10, 20, .86) 62%, rgba(12, 11, 18, .96)),
+        url("/assets/images/notes/writing-desk.webp");
+}
+
+#communitySection::before {
+    background-image:
+        linear-gradient(180deg, rgba(8, 11, 22, .4), rgba(8, 11, 22, .85) 62%, rgba(12, 11, 18, .96)),
+        url("/assets/images/community/collaboration.webp");
+}
+
+#profileSection::before {
+    background-image:
+        linear-gradient(180deg, rgba(8, 11, 22, .4), rgba(8, 11, 22, .86) 62%, rgba(12, 11, 18, .96)),
+        url("/assets/images/section-backgrounds/digital-earth-network.webp");
+}
+
+#settingsSection::before {
+    background-image:
+        linear-gradient(180deg, rgba(8, 12, 24, .4), rgba(8, 12, 24, .86) 62%, rgba(12, 11, 18, .96)),
+        url("/assets/images/section-backgrounds/cybersecurity-network.webp");
+}
+
+.auth-grid {
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes aura-haze-drift {
+    from { transform: translate3d(-2%, -1%, 0) scale(.98); }
+    to { transform: translate3d(2%, 1.5%, 0) scale(1.04); }
+}
+
+@keyframes aura-galaxy-drift {
+    from { transform: scale(1); background-position: 48% 50%; }
+    to { transform: scale(1.06); background-position: 52% 50%; }
+}
+
+@keyframes aura-section-drift {
+    from { background-position: center 46%; }
+    to { background-position: center 54%; }
+}
+
+@keyframes aura-dashboard-drift {
+    from { background-position: center 46%, 92% 48%, center 46%; }
+    to { background-position: center 54%, 92% 52%, center 54%; }
+}
+
+@keyframes aura-orb-float {
+    from { transform: translate3d(0, 0, 0) rotate(-5deg); }
+    to { transform: translate3d(-18px, 24px, 0) rotate(5deg); }
+}
+
+@keyframes aura-orbit {
+    from { rotate: 0deg; }
+    to { rotate: 360deg; }
+}
+
+@keyframes aura-wave-drift {
+    from { transform: perspective(580px) rotateX(57deg) translateX(-1.5%); }
+    to { transform: perspective(580px) rotateX(57deg) translateX(1.5%); }
+}
+
+@media (max-width: 760px) {
+    .ambient-haze { inset: -22%; opacity: .25; }
+    .ambient-galaxy { inset: 0; opacity: .13; }
+    .ambient-orb { top: 26%; right: -22%; width: 220px; opacity: .15; }
+    .ambient-wave { bottom: -8%; height: 30%; opacity: .22; }
+    .ambient-canvas { opacity: .48; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .ambient-haze,
+    .ambient-orb,
+    .ambient-orb::before,
+    .ambient-wave,
+    .page-section::before {
+        animation: none !important;
+    }
+
+    .ambient-galaxy { animation: none !important; }
+    .ambient-canvas { opacity: .28; }
+}

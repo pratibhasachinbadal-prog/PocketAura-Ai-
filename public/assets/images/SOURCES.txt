@@ -1,0 +1,26 @@
+PocketAura local image assets
+
+All photographs are served as locally stored WebP files and were sourced
+from Unsplash. See https://unsplash.com/license for the Unsplash License.
+
+Asset                                      Unsplash photo ID
+backgrounds/login-workspace.webp           photo-1498050108023-c5249f4df085
+login/registration-office.webp             photo-1497366811353-6870744d04b2
+dashboard/welcome-workspace.webp           photo-1519389950473-47ba0277781c
+ai-chat/assistant-robot.webp               photo-1485827404703-89b55fcc595e
+study/learning-space.webp                  photo-1509062522246-3755977927d7
+code-lab/circuit-workspace.webp            photo-1518770660439-4636190af475
+content/creative-studio.webp               photo-1558655146-d09347e92766
+community/collaboration.webp               photo-1521737711867-e3b97375f902
+challenges/achievement-stage.webp          photo-1531058020387-3be344556be6
+notes/writing-desk.webp                    photo-1455390582262-044cdead277a
+profile/cover-office.webp                  photo-1524758631624-e2822e304c36
+profile/avatar-default.webp                photo-1500648767791-00dcc994a43e
+thumbnails/bookshelf.webp                  photo-1481627834876-b7833e8f5570
+section-backgrounds/cosmic-nebula.webp     photo-1462331940025-496dfbfc7564
+section-backgrounds/digital-earth-network.webp photo-1451187580459-43490279c0fa
+section-backgrounds/ai-control-room.webp   photo-1558494949-ef010cbdcc31
+section-backgrounds/cybersecurity-network.webp photo-1550751827-4bd374c3f58b
+section-backgrounds/neural-ai-visual.webp photo-1535378620166-273708d44e4c
+section-backgrounds/code-matrix.webp      photo-1526374965328-7f61d4dc18c5
+section-backgrounds/ai-brain-visual.webp  photo-1677442136019-21780ecad995
