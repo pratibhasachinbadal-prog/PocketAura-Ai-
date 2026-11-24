@@ -766,6 +766,8 @@ function show(id) {
     document.getElementById("pageLabel").textContent = sectionTitles[id] || "PocketAura";
 }
 
+window.show = show;
+
 
 async function api(url, options={}) {
 
